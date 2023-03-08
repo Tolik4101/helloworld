@@ -1,10 +1,11 @@
 #include <iostream>
 #include <string>
-using namespace std;
 
 int main(){
-string name;
-cin>>name;
-cout<< "Hello world from " << name;
+std::string name;
+std::cin>>name;
+std::cout<< "Hello world from " << name;
+//ural stoit posetit 
+
 return 0; 
 }
