@@ -13,4 +13,9 @@
 `git log`
 `git branch -d ...`
 
+# PART III
+
+`git merge`
+`git push --force`
+`clang-format -i --style=Mozilla`
 
