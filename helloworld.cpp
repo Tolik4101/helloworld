@@ -3,7 +3,8 @@
 using namespace std;
 
 int main(){
-string s = "Hello world";
-cout<<s;
-return 0;
+string name;
+cin>>name;
+cout<< "Hello world from " << name;
+return 0; 
 }
