@@ -116,6 +116,8 @@
 
 6. Для этого локально выполните pull + rebase (точную последовательность команд, следует узнать самостоятельно). Исправьте конфликты.
 
+`$ git pull origin main --rebase`
+
 7. Сделайте force push в ветку patch2
 <img width="741" alt="Снимок экрана 2023-03-08 в 21 29 36" src="https://user-images.githubusercontent.com/102604371/224076769-7e390b84-541e-4d92-b885-e61d1adc9219.png">
 
