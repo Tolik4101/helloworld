@@ -60,7 +60,7 @@
 
 5. Создайте pull-request patch1 -> master.
 
-<img width="1425" alt="Снимок экрана 2023-03-08 в 20 07 09" src="https://user-images.githubusercontent.com/102604371/224072542-0aea64ee-8351-49b8-8cf3-7d44f29a58dc.png">
+`git pull origin main`
 
 6. В локальной копии в ветке patch1 добавьте в исходный код комментарии.
 
@@ -72,7 +72,11 @@
 
 8.Проверьте, что новые изменения есть в созданном на шаге 5 pull-request
 
+<img width="1425" alt="Снимок экрана 2023-03-08 в 20 07 09" src="https://user-images.githubusercontent.com/102604371/224072542-0aea64ee-8351-49b8-8cf3-7d44f29a58dc.png">
+
 9.В удалённый репозитории выполните слияние PR patch1 -> master и удалите ветку patch1 в удаленном репозитории.
+
+`git merge patch1`
 
 <img width="1411" alt="Снимок экрана 2023-03-08 в 20 29 36" src="https://user-images.githubusercontent.com/102604371/224073980-fa91d486-861f-4c8e-a18e-56f45913a358.png">
 
@@ -80,25 +84,51 @@
 
 11. С помощью команды git log просмотрите историю в локальной версии ветки master.
 
+`git log`
+
 <img width="840" alt="Снимок экрана 2023-03-08 в 20 36 02" src="https://user-images.githubusercontent.com/102604371/224073892-cf1be1f5-7056-451a-b791-84712df28af9.png">
 
 12. Удалите локальную ветку patch1.
 
-<img width="842" alt="Снимок экрана 2023-03-08 в 20 25 06" src="https://user-images.githubusercontent.com/102604371/224074157-9a95453a-b12a-45c5-9b2b-73d54b628805.png">
-
-`git merge patch1`
-
-`git pull origin main`
-
-`git log`
-
 `git branch -d ...`
+
+<img width="842" alt="Снимок экрана 2023-03-08 в 20 25 06" src="https://user-images.githubusercontent.com/102604371/224074157-9a95453a-b12a-45c5-9b2b-73d54b628805.png">
 
 # PART III
 
-`git merge`
+1. Создайте новую локальную ветку patch2.
+
+`git checkout -b ...`
+
+2. Измените code style с помощью утилиты clang-format. Например, используя опцию -style=Mozilla.
+
+`clang-format -i --style=Mozilla`
+
+3. commit, push, создайте pull-request patch2 -> master.
+
+<img width="1414" alt="Снимок экрана 2023-03-08 в 20 53 20" src="https://user-images.githubusercontent.com/102604371/224075829-191f6b5e-2b2d-427c-a266-d12b173d6c31.png">
+
+4. В ветке master в удаленном репозитории измените комментарии, например, расставьте знаки препинания, переведите комментарии на другой язык.
+
+5. Убедитесь, что в pull-request появились конфликтны.
+
+<img width="1398" alt="Снимок экрана 2023-03-08 в 21 10 17" src="https://user-images.githubusercontent.com/102604371/224076151-31a3833e-a30d-42aa-99b8-be26a1d634f1.png">
+
+6. Для этого локально выполните pull + rebase (точную последовательность команд, следует узнать самостоятельно). Исправьте конфликты.
+
+7. Сделайте force push в ветку patch2
+<img width="741" alt="Снимок экрана 2023-03-08 в 21 29 36" src="https://user-images.githubusercontent.com/102604371/224076769-7e390b84-541e-4d92-b885-e61d1adc9219.png">
 
 `git push --force`
 
-`clang-format -i --style=Mozilla`
+8. Убедитель, что в pull-request пропали конфликтны.
+ <img width="1401" alt="Снимок экрана 2023-03-08 в 21 28 20" src="https://user-images.githubusercontent.com/102604371/224076490-3bbdb99e-b6f0-4f66-bb52-0ee7f6ff90c8.png">
+ 
+ 9. Вмержите pull-request patch2 -> master.
+
+`git merge`
+
+
+
+
 
